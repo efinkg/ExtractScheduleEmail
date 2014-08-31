@@ -11,9 +11,6 @@ import urllib3
 
 from BeautifulSoup import BeautifulSoup
 
-f = open("Classes.csv", "w+")
-f.close()
-
 classList = BeautifulSoup(open('Class Schedule.html'))
 
 semester = classList.find(selected="selected")
