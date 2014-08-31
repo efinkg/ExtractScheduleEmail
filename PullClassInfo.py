@@ -14,7 +14,7 @@ from BeautifulSoup import BeautifulSoup
 f = open("Classes.csv", "w+")
 f.close()
 
-classList = BeautifulSoup(open('ClassSchedule.html'))
+classList = BeautifulSoup(open('Class Schedule.html'))
 
 semester = classList.find(selected="selected")
 fallSpring = semester.contents[0][0:2]
