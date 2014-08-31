@@ -3,7 +3,6 @@ from icalendar import Calendar,Event
 from pytz import timezone
 import pytz
 from datetime import datetime
-from icalendar import LocalTimezone
 
 def write(enrolledClasses):
 
@@ -44,7 +43,7 @@ def write(enrolledClasses):
         cal.add_component(event)
 
     import tempfile, os
-    directory = tempfile.mkdtemp()
-    f = open(os.path.join('/Users/glassman/SkyDrive/Silly Engineering/ExtractSchedule', 'MyClassSchedule.ics'), 'wb')
+    directory = tempfile.mkdtemp() #Pick the current local directory
+    f = open(os.path.join(directory, 'MyClassSchedule.ics'), 'wb')
     f.write(cal.to_ical())
     f.close()

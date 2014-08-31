@@ -4,12 +4,12 @@ def extractStartStopTimes(classDayTime):
     classStartEnd = classDayTime[1].split('-')
     if classStartEnd[0].endswith('a'):
         classStartEnd[0] = classStartEnd[0][:-1]
-        classStart = classStartEnd[0] #+ " AM"
+        classStart = classStartEnd[0] #AM
         classStartHour = int(classStart.split(':')[0])
         classStartMinute = int(classStart.split(':')[1])
     if classStartEnd[0].endswith('p'):
         classStartEnd[0] = classStartEnd[0][:-1]
-        classStart = classStartEnd[0] #+ " PM"
+        classStart = classStartEnd[0] #PM
         if int(classStart.split(':')[0]) == 12:
             classStartHour = int(classStart.split(':')[0])
         else:
@@ -18,12 +18,12 @@ def extractStartStopTimes(classDayTime):
 
     if classStartEnd[1].endswith('a'):
         classStartEnd[1] = classStartEnd[1][:-1]
-        classEnd = classStartEnd[1] #+ " AM"
+        classEnd = classStartEnd[1] #AM
         classEndHour = int(classEnd.split(':')[0])
         classEndMinute = int(classEnd.split(':')[1])
     if classStartEnd[1].endswith('p'):
         classStartEnd[1] = classStartEnd[1][:-1]
-        classEnd = classStartEnd[1] #+ " PM"
+        classEnd = classStartEnd[1] #PM
         if int(classEnd.split(':')[0]) == 12:
             classEndHour = int(classEnd.split(':')[0])
         else:

@@ -1,13 +1,8 @@
 __author__ = 'glassman'
-import csv
-import ExtractDaysTimes
+import extractDaysTimes
 import makeCalendar
 import getDates
-#import firstOfSemester
-import urllib3
-#We plan to make CSV files Google Calendar can understand
-#https://support.google.com/calendar/answer/45656
-#Format is Subject,Start Date,Start Time,End Date,End Time,All Day Event,Description,Location,Private
+#We plan to make iCal files Google Calendar can understand
 
 from BeautifulSoup import BeautifulSoup
 
@@ -33,11 +28,9 @@ for tr in rows:
         classTime = classInfo[5]
         classDayTime = classTime.split(' ') #classDayTime[0] is the days of the week
                                             #classDatTime[1] is the start-end time
-        classStartHour,classStartMinute,classEndHour,classEndMinute = ExtractDaysTimes.extractStartStopTimes(classDayTime)
-        classDaysOfWeek = ExtractDaysTimes.extractDaysOfWeek(classDayTime)
+        classStartHour,classStartMinute,classEndHour,classEndMinute = extractDaysTimes.extractStartStopTimes(classDayTime)
+        classDaysOfWeek = extractDaysTimes.extractDaysOfWeek(classDayTime)
         className = classInfo[2]
         classLocation = classInfo[6]
-        #firstOfSemester.weekOne(year,firstDay)
         enrolledClasses.append([className,classLocation,classYear,firstMonth,lastMonth,firstDay,lastDay,classStartHour,classStartMinute,classEndHour,classEndMinute,classDaysOfWeek])
-        #makeCalendar.write(className,classLocation,classYear,firstMonth,lastMonth,firstDay,lastDay,classStartHour,classStartMinute,classEndHour,classEndMinute,classDaysOfWeek)
 makeCalendar.write(enrolledClasses)

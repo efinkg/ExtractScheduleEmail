@@ -1,6 +1,5 @@
 __author__ = 'glassman'
 import urllib3
-import csv
 import monthNumber
 from BeautifulSoup import BeautifulSoup
 
@@ -49,17 +48,13 @@ def findBeginEnd(semester,year):
         for i in range (0,5):
             if listofcols[i][0].startswith(year):
                 firstDay = listofcols[i][1]
-                #print "First day is " + listofcols[i][1]
                 lastDay = listofcols[i][5]
-                #print "Last day is " + listofcols[i][5]
     elif semester == "SP":
         for i in range (0,5):
             print year[-2:]
             if listofcols[i][0].endswith(year[-2:]):
                 firstDay = listofcols[i][7]
-                #print "First day is " + listofcols[i][7]
                 lastDay = listofcols[i][10]
-                #print "Last day is " + listofcols[i][10]
 
     firstMonth = int(monthNumber.monthToNum(firstDay.split(' ')[0]))
     firstDay = int(firstDay.split(' ')[1])
