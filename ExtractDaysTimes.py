@@ -8,7 +8,7 @@ def extractStartStopTimes(classDayTime): #Info comes in format like 10:00-11:30p
         classStartMinute = int(classStartEnd[0].split(':')[1]) #Strip minutes
     if classStartEnd[0].endswith('p'): #Find classes that start in the afternoon
         classStartEnd[0] = classStartEnd[0][:-1]
-        if int(classStartEnd[0](':')[0]) == 12: #Find classes that start at noon
+        if int(classStartEnd[0].split(':')[0]) == 12: #Find classes that start at noon
             classStartHour = int(classStartEnd[0].split(':')[0])
         else:
             classStartHour = int(classStartEnd[0].split(':')[0]) + 12 #All other afternoon classes put into 24hr

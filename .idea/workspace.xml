@@ -32,10 +32,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="makeCalendar.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="makeCalendar.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/makeCalendar.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="85" selection-start="2072" selection-end="2072" vertical-scroll-proportion="1.2255772" vertical-offset="0" max-vertical-offset="810">
+            <state line="23" column="33" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
               </folding>
@@ -46,7 +46,7 @@
       <file leaf-file-name="getDates.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/getDates.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="71" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+            <state line="48" column="15" selection-start="2145" selection-end="2145" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1020">
               <folding>
                 <element signature="e#24#38#0" expanded="true" />
               </folding>
@@ -65,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="extractDaysTimes.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="extractDaysTimes.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/extractDaysTimes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="78" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="780">
+            <state line="10" column="37" selection-start="654" selection-end="654" vertical-scroll-proportion="0.26642984" vertical-offset="0" max-vertical-offset="780">
               <folding />
             </state>
           </provider>
@@ -89,10 +89,10 @@
         <option value="$PROJECT_DIR$/PullClassInfo.py" />
         <option value="$PROJECT_DIR$/ExtractDaysTimes.py" />
         <option value="$PROJECT_DIR$/pullClassInfo.py" />
-        <option value="$PROJECT_DIR$/extractDaysTimes.py" />
-        <option value="$PROJECT_DIR$/getDates.py" />
         <option value="$PROJECT_DIR$/monthNumber.py" />
         <option value="$PROJECT_DIR$/makeCalendar.py" />
+        <option value="$PROJECT_DIR$/getDates.py" />
+        <option value="$PROJECT_DIR$/extractDaysTimes.py" />
       </list>
     </option>
   </component>
@@ -394,7 +394,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39937434" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38373306" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38373306" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -455,15 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getDates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="71" selection-start="2742" selection-end="2742" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <folding>
-            <element signature="e#24#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pullClassInfo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="69" selection-start="2028" selection-end="2028" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
@@ -473,19 +464,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/extractDaysTimes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="78" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.0" vertical-offset="217" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/makeCalendar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="85" selection-start="2072" selection-end="2072" vertical-scroll-proportion="1.2255772" vertical-offset="0" max-vertical-offset="810">
+        <state line="23" column="33" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
           <folding>
             <element signature="e#24#60#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getDates.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="15" selection-start="2145" selection-end="2145" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1020">
+          <folding>
+            <element signature="e#24#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extractDaysTimes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="37" selection-start="654" selection-end="654" vertical-scroll-proportion="0.26642984" vertical-offset="0" max-vertical-offset="780">
+          <folding />
         </state>
       </provider>
     </entry>

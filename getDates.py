@@ -46,13 +46,13 @@ def findBeginEnd(semester,year):
                             colNum += 1
     if semester == "FL": #Pull info for fall semster
         for i in range (0,5):
-            if listofcols[i][0].startswith(year): #Find the year of interest
+            if listofcols[i][0].startswith(str(year)): #Find the year of interest
                 firstDay = listofcols[i][1] #First day is
                 lastDay = listofcols[i][5] #Last day is
     elif semester == "SP":
         for i in range (0,5):
             print year[-2:]
-            if listofcols[i][0].endswith(year[-2:]):
+            if listofcols[i][0].endswith(str(year)[-2:]):
                 firstDay = listofcols[i][7]
                 lastDay = listofcols[i][10]
 
