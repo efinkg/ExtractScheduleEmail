@@ -1,5 +1,6 @@
 __author__ = 'glassman'
 #Taken from StackOverflow
+#Uses a dictionary to turn month name into month number
 
 def monthToNum(date):
 
