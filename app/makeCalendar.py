@@ -5,8 +5,9 @@ import pytz
 from datetime import datetime
 
 def write(enrolledClasses):
-
     cal = Calendar()
+
+    print "I'm making a calendar"
 
     cal.add('version', '2.0') #http://icalendar.readthedocs.org/en/latest/
     cal.add('prodid', '-//My calendar product//mxm.dk//')
@@ -43,7 +44,9 @@ def write(enrolledClasses):
         cal.add_component(event) #Put this event into a calendar
 
     import tempfile, os
-    directory = tempfile.mkdtemp() #Pick the current local directory
+    directory = os.getcwd() #Pick the current local directory
+    print directory
     f = open(os.path.join(directory, 'MyClassSchedule.ics'), 'wb') #Make an iCal file
+    print "Calendar?"
     f.write(cal.to_ical())
     f.close()

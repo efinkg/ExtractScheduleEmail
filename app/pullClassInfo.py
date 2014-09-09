@@ -1,4 +1,4 @@
-__author__ = 'glassman'
+_author__ = 'glassman'
 import extractDaysTimes
 import makeCalendar
 import getDates

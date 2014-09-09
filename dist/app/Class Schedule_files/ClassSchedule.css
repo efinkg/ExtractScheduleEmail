@@ -1,0 +1,255 @@
+﻿
+form
+{
+	font-size: 11pt;
+	font-family: calibri;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0;
+	min-width: 830px;
+}
+
+#formGrade
+{
+	min-width: 730px;
+}
+
+.sectionColumn
+{
+	vertical-align:top;
+	width:60px;
+}
+
+.labelColumn
+{
+	text-align:left;
+	font-size:13pt;
+	color: #59323B;
+	width:110px;
+}
+
+.contextColumn
+{
+	padding-left:0px;
+	width:800px;
+}
+
+.sectionLink
+{
+	width:200px; 
+	text-align:left;
+	font-size:11pt;
+	vertical-align:top;
+}
+div.header
+{
+	background-color: #990000;
+	clear: left;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+.lblSectionHead
+{
+	font-size: 12pt;
+	font-weight: bold;
+}
+.lblCourseHead
+{
+	color: #990000;
+	font-size: 12pt;
+	font-weight: bold;
+}
+.lblHeader
+{
+	font-size: 20px;
+}
+.lblName
+{
+	font-size: 12pt;
+}
+.margin12
+{
+	padding: 12px 1% 12px 1%;
+	width: 98%;
+}
+.divPageHeader
+{
+	font-size: 19px;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 8px;
+}
+a, a:visited, a:hover
+{
+	text-decoration: none;
+	color: Blue;
+}
+
+.listFont
+{
+	font-size: 11pt;
+	font-family: calibri;
+	height: auto;
+}
+
+.GenericLabel
+{
+	color:#7F7F7F;
+}
+.divCenter
+{
+	width: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ResultTable
+{
+	min-width:830px;
+}
+.ResultTable2
+{
+	min-width:730px;
+	max-width:860px;
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ResultTableGPA
+{
+	width:300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.MainTableHeader
+{
+	border-collapse:collapse;
+	border: 1px solid Gray;
+	font-size: 11pt;
+	font-family: calibri;
+}
+
+.MainTableRow
+{
+	border-collapse:collapse;
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: Gray;
+	font-size: 11pt;
+	font-family: calibri;
+}
+.MainTableRow2
+{
+	border-width: 0;
+}
+
+.MainTableHeaderCell
+{
+	text-align: left;
+	background-color: #D4D7FF;
+	font-size: 10pt;
+	font-weight: normal;
+}
+.MainTableTitle
+{
+	background-color: #ECF0FF;
+	font-weight: bold;
+}
+
+.SortButtonFont
+{
+	color: Black;
+}
+.ItemRow
+{
+	vertical-align: top;
+}
+.ItemRowCenter
+{
+	vertical-align: top;
+	text-align: center;
+}
+.ItemRowRight
+{
+	vertical-align: top;
+	text-align: right;
+	padding-right:15px;
+}
+.ItemPadding
+{
+	padding-left:10px;
+}
+.ItemPadding2
+{
+	padding-left:20px;
+}
+.ItemPadding3
+{
+	padding-left:30px;
+}
+
+.lnkHideExam, .lnkScheduleGV, .lnkBookList
+{
+	cursor:pointer;
+}
+
+.tbl
+{
+	border: 1px solid gray;
+}
+
+.tblHeaderCell
+{
+	background-color: #D4D7FF;
+	text-align: center;
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+.tblTimeCell
+{
+	border-top: 1px solid gray;
+	border-right: 1px solid gray;
+	text-align: right;
+}
+
+.tblCell
+{
+	/*border-top: 1px solid gray;
+	border-right: 1px solid gray;*/
+	text-align: left;
+}
+
+.tblLastCell
+{
+	/*border-top: 1px solid gray;*/
+	text-align: left;
+}
+
+.tblConflictCell
+{
+	width: 100%;
+	text-align: center;
+	color:Black;
+}
+
+.lblBold
+{
+  font-weight: bold;
+}
+
+.btnGreen
+{
+	height:30px;
+	padding:5px;
+	background-color:#00C000;
+	color:White;
+	border:solid 2px gray;
+	border-bottom-color:black;
+	border-right-color:black;
+}
