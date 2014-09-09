@@ -7,8 +7,6 @@ from datetime import datetime
 def write(enrolledClasses):
     cal = Calendar()
 
-    print "I'm making a calendar"
-
     cal.add('version', '2.0') #http://icalendar.readthedocs.org/en/latest/
     cal.add('prodid', '-//My calendar product//mxm.dk//')
     cal.add('X-WR-CALNAME','WashU Classes' )
@@ -45,8 +43,6 @@ def write(enrolledClasses):
 
     import tempfile, os
     directory = os.getcwd() #Pick the current local directory
-    print directory
     f = open(os.path.join(directory, 'MyClassSchedule.ics'), 'wb') #Make an iCal file
-    print "Calendar?"
     f.write(cal.to_ical())
     f.close()
