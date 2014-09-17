@@ -1,25 +1,39 @@
 __author__ = 'glassman'
 
-def extractStartStopTimes(classDayTime): #Info comes in format like 10:00-11:30p
-    classStartEnd = classDayTime[1].split('-') #Want to seperate start and stop times
-    if classStartEnd[0].endswith('a'): #Find classes that start in the morning
-        classStartEnd[0] = classStartEnd[0][:-1] #Strip the 'a'
+def extractStartStopTimes(classStartEnd): #Info comes in format like 10:00-11:30p #Already seperated start and stop times
+    if classStartEnd[0].endswith('AM'): #Find classes that start in the morning
+        classStartEnd[0] = classStartEnd[0][:-2] #Strip the 'a'
         classStartHour = int(classStartEnd[0].split(':')[0]) #Strip hours
         classStartMinute = int(classStartEnd[0].split(':')[1]) #Strip minutes
-    if classStartEnd[0].endswith('p'): #Find classes that start in the afternoon
-        classStartEnd[0] = classStartEnd[0][:-1]
+    if classStartEnd[0].endswith('AM '): #Find classes that start in the morning
+        classStartEnd[0] = classStartEnd[0][:-3] #Strip the 'a'
+        classStartHour = int(classStartEnd[0].split(':')[0]) #Strip hours
+        classStartMinute = int(classStartEnd[0].split(':')[1]) #Strip minutes
+    if classStartEnd[0].endswith('PM'): #Find classes that start in the afternoon
+        classStartEnd[0] = classStartEnd[0][:-2]
         if int(classStartEnd[0].split(':')[0]) == 12: #Find classes that start at noon
             classStartHour = int(classStartEnd[0].split(':')[0])
         else:
             classStartHour = int(classStartEnd[0].split(':')[0]) + 12 #All other afternoon classes put into 24hr
         classStartMinute = int(classStartEnd[0].split(':')[1])
 
-    if classStartEnd[1].endswith('a'):
-        classStartEnd[1] = classStartEnd[1][:-1]
+    if classStartEnd[1].endswith('AM'):
+        classStartEnd[1] = classStartEnd[1][:-2]
         classEndHour = int(classStartEnd[1].split(':')[0])
         classEndMinute = int(classStartEnd[1].split(':')[1])
-    if classStartEnd[1].endswith('p'):
-        classStartEnd[1] = classStartEnd[1][:-1]
+    if classStartEnd[1].endswith('AM '):
+        classStartEnd[1] = classStartEnd[1][:-2]
+        classEndHour = int(classStartEnd[1].split(':')[0])
+        classEndMinute = int(classStartEnd[1].split(':')[1])
+    if classStartEnd[1].endswith('PM'):
+        classStartEnd[1] = classStartEnd[1][:-2]
+        if int(classStartEnd[1].split(':')[0]) == 12:
+            classEndHour = int(classStartEnd[1].split(':')[0])
+        else:
+            classEndHour = int(classStartEnd[1].split(':')[0]) + 12
+        classEndMinute = int(classStartEnd[1].split(':')[1])
+    if classStartEnd[1].endswith('PM '):
+        classStartEnd[1] = classStartEnd[1][:-3]
         if int(classStartEnd[1].split(':')[0]) == 12:
             classEndHour = int(classStartEnd[1].split(':')[0])
         else:
