@@ -4,14 +4,16 @@ import imaplib
 import getpass
 import email
 import datetime
+import cleanEmail
 
 M = imaplib.IMAP4_SSL('imap.gmail.com')
+emailsToRespond = {}
 def main():
     try:
         M.login('washuschedulemaker@gmail.com', getpass.getpass())
         rv, mailboxes = M.list()
         if rv == 'OK':
-            rv, data = M.select("Inbox")
+            rv, data = M.select("ScheduleMaker")
             process_mailbox(M) # ... do something with emails, see below ...
             M.close()
     except imaplib.IMAP4.error:
@@ -33,22 +35,20 @@ def process_mailbox(M):
             return
         if rv == 'OK':
             msg = email.message_from_string(data[0][1])
-            print 'Message %s: %s' % (num, msg['Subject'])
-            print 'Raw Date:', msg['Date']
+            #print 'Message %s: %s' % (num, msg['Subject'])
+            #print 'Raw Date:', msg['Date']
             date_tuple = email.utils.parsedate_tz(msg['Date'])
             if date_tuple:
                 local_date = datetime.datetime.fromtimestamp(
                     email.utils.mktime_tz(date_tuple))
-                print "Local Date:", \
-                    local_date.strftime("%a, %d %b %Y %H:%M:%S")
-            print msg.as_string()
+                #print "Local Date:", \
+                    #local_date.strftime("%a, %d %b %Y %H:%M:%S")
+            cleanEmail.getSchedule(msg.as_string())
             '''
-            if msg.is_multipart():
-                for payload in msg.get_payload():
-                    # if payload.is_multipart(): ...
-                    print payload.get_payload()
-            else:
-                print msg.get_payload()
+            addressCleaning = msg['From'].split('<')[1]
+            cleanedAddress = addressCleaning.split('>')[0]
+            emailsToRespond.update({cleanedAddress,msg.as_string()})
             '''
+
 if __name__ == "__main__":
     main()
