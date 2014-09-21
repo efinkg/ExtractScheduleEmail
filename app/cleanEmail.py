@@ -32,15 +32,25 @@ def extractInfo(classInfo,year,semester):
         className = str(className).split('Credit ')[1]
     classInfo = classInfo.split('\\n')[-1]
     classLocation = classInfo.split(' -')[0]
-    classTimes = classInfo
     if ' -' in str(classInfo):
         classInfo = classInfo.split(' -')[1]
     elif 'M-' in str(classInfo):
         classInfo = 'M-' + str(classInfo.split('M-')[1])
-    classTime = classTimes.split('- ')[1:]
+    classTimes = classInfo
+    print classTimes
+    if '- ' in classTimes:
+        classTime = classTimes.split('- ')[1:]
+    '''
+    for character in str(classTime):
+        print character, character.encode('hex')
+    '''
+    print classTime
+    if '-' in str(classTime):
+        classTime = str(classTime).split('-')
+    print classTime
     classDays = classInfo.split(' ')[0]
     #classTime = str(classTimes.split(':')[0])+':'+str(classTimes.split(':')[1])+':'+str(classTimes.split(':')[2])
-    print classTime
+    #print "Class " + str(className) + " meets in " + str(classLocation) + " on the days " + str(classDays) + ' from ' + str(classTime)
     classStartHour,classStartMinute,classEndHour,classEndMinute = extractDaysTimes.extractStartStopTimes(classTime)
     daysWithClass = extractDaysTimes.extractDaysOfWeek(classDays)
     firstMonth,firstDay,lastMonth,lastDay = getDates.findBeginEnd(semester,year) #Send this info to getDates to find when this specific semester starts and ends
